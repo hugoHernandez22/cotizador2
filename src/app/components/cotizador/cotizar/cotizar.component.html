@@ -31,11 +31,16 @@
             <option value="7">Brazil</option>
         </select>
     </div>
-    <table class="table table-sm">
-        <tr *ngFor="let cotizador of cotizadorService.list ">
-            <td>{{ cotizador.id_pais}} </td>
-            <td>{{ cotizador.nombre}} </td>
-            
-      </tr>
-    </table>
+   
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-globe-americas"> País Destino</i>
+            </div>
+        </div>
+        <select  *ngFor="let cotizador of cotizadorService.list " type="text" class="form-control" formControlName="pais_origen" placeholder="pais_origen">
+            <option value= "{{ cotizador.id_pais }}">{{ cotizador.nombre}}</option>
+          
+        </select>
+    </div>
 </div>

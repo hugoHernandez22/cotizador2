@@ -1,0 +1,41 @@
+<div class="form-group">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-globe"> Región</i>
+            </div>
+        </div>
+        <select type="text" class="form-control" formControlName="region" placeholder="region">
+            <option value="1">Norte América</option>
+            <option value="2">Centro América</option>
+            <option value="3">Sur América</option>
+            <option value="4">Asia</option>
+            <option value="5">Oceanía</option>
+            <option value="6">África</option>
+            <option value="7">Suramérica</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-globe-americas"> País Origen</i>
+            </div>
+        </div>
+        <select type="text" class="form-control" formControlName="pais_origen" placeholder="pais_origen">
+            <option value="1">Estados Unidos</option>
+            <option value="2">México</option>
+            <option value="3">España</option>
+            <option value="4">Alemania</option>
+            <option value="5">Italia</option>
+            <option value="6">Francia</option>
+            <option value="7">Brazil</option>
+        </select>
+    </div>
+    <table class="table table-sm">
+        <tr *ngFor="let cotizador of cotizadorService.list ">
+            <td>{{ cotizador.id_pais}} </td>
+            <td>{{ cotizador.nombre}} </td>
+            
+      </tr>
+    </table>
+</div>
